@@ -17,7 +17,8 @@
       "Bash(git commit -m \"$\\(cat <<''EOF''\nUpdate event date to March 1, 2026 and location to Carlisle Expo Center\n\n- Updated countdown timer to March 1, 2026\n- Removed seconds from countdown \\(now shows days, hours, minutes\\)\n- Added date and location display under the countdown timer\n- Updated all screens \\(Home, Event, Tickets\\) with new date and location\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
       "Bash(git push)",
       "Bash(docker ps:*)",
-      "Bash(Carlisle Expo Center\"\n- Changed countdown interval to 1 second for responsive minute updates\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")"
+      "Bash(Carlisle Expo Center\"\n- Changed countdown interval to 1 second for responsive minute updates\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git commit:*)"
     ]
   }
 }
