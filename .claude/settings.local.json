@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:soupcookoff-mobile.lovable.app)",
+      "WebFetch(domain:soupcookoff.com)",
+      "Bash(dir:*)",
+      "Bash(npm install)",
+      "Bash(npm run dev:*)",
+      "Bash(copy \"C:\\\\Users\\\\dsiem\\\\Downloads\\\\SCO_Mobile\\\\soup-cook-off-banner-BIAymuQ-.png\" \"C:\\\\Users\\\\dsiem\\\\Downloads\\\\SCO_Mobile\\\\public\\\\logo-banner.png\")",
+      "Bash(findstr:*)"
+    ]
+  }
+}

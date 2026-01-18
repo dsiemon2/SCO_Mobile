@@ -1,0 +1,9 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: sco_mobile_app
+    ports:
+      - "8150:3000"
+    restart: unless-stopped

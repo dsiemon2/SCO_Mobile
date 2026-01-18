@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Mobile App Base Styles */
+:root {
+  --safe-area-top: env(safe-area-inset-top, 0px);
+  --safe-area-bottom: env(safe-area-inset-bottom, 0px);
+  --bottom-nav-height: 80px;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: #FFF8F0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Prevent pull-to-refresh on mobile browsers */
+body {
+  overscroll-behavior-y: contain;
+}
+
+/* iOS safe areas */
+.safe-top {
+  padding-top: max(20px, var(--safe-area-top));
+}
+
+.safe-bottom {
+  padding-bottom: max(20px, var(--safe-area-bottom));
+}
+
+/* Native-like scrolling */
+.native-scroll {
+  -webkit-overflow-scrolling: touch;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+/* Smooth transitions for page changes */
+.page-transition {
+  animation: fadeSlideIn 0.3s ease-out;
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Card press effect */
+.pressable {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.pressable:active {
+  transform: scale(0.98);
+}
+
+/* Hide scrollbar but keep functionality */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Desktop testing mode - show subtle scrollbar when using mouse */
+@media (hover: hover) and (pointer: fine) {
+  .native-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(107, 0, 62, 0.2) transparent;
+  }
+
+  .native-scroll::-webkit-scrollbar {
+    width: 6px;
+    display: block;
+  }
+
+  .native-scroll::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .native-scroll::-webkit-scrollbar-thumb {
+    background-color: rgba(107, 0, 62, 0.2);
+    border-radius: 3px;
+  }
+
+  .native-scroll::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(107, 0, 62, 0.4);
+  }
+
+  /* Override hide-scrollbar for desktop testing */
+  .native-scroll.hide-scrollbar {
+    scrollbar-width: thin;
+  }
+
+  .native-scroll.hide-scrollbar::-webkit-scrollbar {
+    display: block;
+  }
+}
+
+/* Button styles */
+.btn-primary {
+  @apply bg-brand-burgundy text-white font-semibold py-4 px-6 rounded-2xl;
+  @apply transition-all duration-200 active:scale-[0.98] active:bg-brand-wine;
+  @apply shadow-md hover:shadow-lg;
+}
+
+.btn-secondary {
+  @apply bg-white text-brand-burgundy font-semibold py-4 px-6 rounded-2xl;
+  @apply border-2 border-brand-burgundy/20;
+  @apply transition-all duration-200 active:scale-[0.98] active:bg-brand-cream;
+}
+
+/* Input styles */
+input, textarea, select {
+  @apply outline-none;
+  font-size: 16px; /* Prevents iOS zoom */
+}
