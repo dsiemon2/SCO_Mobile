@@ -46,9 +46,9 @@ export default function EventScreen() {
               <MapPin size={24} />
             </div>
             <div className="flex-1">
-              <h2 className="font-semibold text-lg">Harrisburg Convention Center</h2>
-              <p className="text-white/80 text-sm mt-1">123 Market Street</p>
-              <p className="text-white/80 text-sm">Harrisburg, PA 17101</p>
+              <h2 className="font-semibold text-lg">Carlisle Expo Center</h2>
+              <p className="text-white/80 text-sm mt-1">100 K Street</p>
+              <p className="text-white/80 text-sm">Carlisle, PA 17013</p>
             </div>
           </div>
 
@@ -78,7 +78,7 @@ export default function EventScreen() {
               </div>
               <div>
                 <p className="text-sm text-gray-500">Date</p>
-                <p className="font-semibold">October 19, 2025</p>
+                <p className="font-semibold">March 1, 2026</p>
               </div>
             </div>
             <div className="w-px h-12 bg-gray-100" />

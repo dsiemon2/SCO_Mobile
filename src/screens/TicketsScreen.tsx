@@ -47,7 +47,7 @@ export default function TicketsScreen() {
       {/* Header */}
       <div className="px-4 pt-4 pb-2">
         <h1 className="text-2xl font-bold text-gray-900">Get Tickets</h1>
-        <p className="text-gray-500 text-sm">October 19, 2025 | Harrisburg, PA</p>
+        <p className="text-gray-500 text-sm">March 1, 2026 | Carlisle, PA</p>
       </div>
 
       {/* Event Quick Info */}
@@ -56,7 +56,7 @@ export default function TicketsScreen() {
           <div className="flex items-center justify-around">
             <div className="flex items-center gap-2">
               <Calendar size={18} className="text-brand-burgundy" />
-              <span className="text-sm font-medium">Oct 19</span>
+              <span className="text-sm font-medium">Mar 1</span>
             </div>
             <div className="w-px h-6 bg-gray-200" />
             <div className="flex items-center gap-2">

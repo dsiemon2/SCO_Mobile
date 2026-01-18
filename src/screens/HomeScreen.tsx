@@ -5,38 +5,43 @@ import { useState, useEffect } from 'react'
 import { useDragScroll } from '../hooks/useDragScroll'
 
 function CountdownTimer() {
-  const eventDate = new Date('2025-10-19T11:00:00')
+  const eventDate = new Date('2026-03-01T11:00:00')
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft())
 
   function calculateTimeLeft() {
     const diff = eventDate.getTime() - new Date().getTime()
-    if (diff <= 0) return { days: 0, hours: 0, minutes: 0, seconds: 0 }
+    if (diff <= 0) return { days: 0, hours: 0, minutes: 0 }
 
     return {
       days: Math.floor(diff / (1000 * 60 * 60 * 24)),
       hours: Math.floor((diff / (1000 * 60 * 60)) % 24),
-      minutes: Math.floor((diff / 1000 / 60) % 60),
-      seconds: Math.floor((diff / 1000) % 60)
+      minutes: Math.floor((diff / 1000 / 60) % 60)
     }
   }
 
   useEffect(() => {
-    const timer = setInterval(() => setTimeLeft(calculateTimeLeft()), 1000)
+    const timer = setInterval(() => setTimeLeft(calculateTimeLeft()), 60000)
     return () => clearInterval(timer)
   }, [])
 
   return (
-    <div className="flex justify-center gap-3">
-      {Object.entries(timeLeft).map(([unit, value]) => (
-        <div key={unit} className="flex flex-col items-center">
-          <div className="bg-white/20 backdrop-blur-sm rounded-xl w-16 h-16 flex items-center justify-center">
-            <span className="text-2xl font-bold text-white">{value}</span>
+    <div className="flex flex-col items-center">
+      <div className="flex justify-center gap-3">
+        {Object.entries(timeLeft).map(([unit, value]) => (
+          <div key={unit} className="flex flex-col items-center">
+            <div className="bg-white/20 backdrop-blur-sm rounded-xl w-16 h-16 flex items-center justify-center">
+              <span className="text-2xl font-bold text-white">{value}</span>
+            </div>
+            <span className="text-white/80 text-xs mt-1 uppercase tracking-wider">
+              {unit}
+            </span>
           </div>
-          <span className="text-white/80 text-xs mt-1 uppercase tracking-wider">
-            {unit}
-          </span>
-        </div>
-      ))}
+        ))}
+      </div>
+      <div className="mt-4 text-center">
+        <p className="text-white font-medium">March 1, 2026</p>
+        <p className="text-white/80 text-sm">Carlisle Expo Center</p>
+      </div>
     </div>
   )
 }
@@ -76,7 +81,7 @@ export default function HomeScreen() {
               Sample. Savor. Vote.
             </p>
             <p className="text-white/70 text-sm mb-6">
-              October 19, 2025 | Harrisburg, PA
+              March 1, 2026 | Carlisle, PA
             </p>
           </motion.div>
 

@@ -7,7 +7,14 @@
       "Bash(npm install)",
       "Bash(npm run dev:*)",
       "Bash(copy \"C:\\\\Users\\\\dsiem\\\\Downloads\\\\SCO_Mobile\\\\soup-cook-off-banner-BIAymuQ-.png\" \"C:\\\\Users\\\\dsiem\\\\Downloads\\\\SCO_Mobile\\\\public\\\\logo-banner.png\")",
-      "Bash(findstr:*)"
+      "Bash(findstr:*)",
+      "Bash(docker-compose up:*)",
+      "Bash(start \"\" \"C:\\\\Program Files\\\\Docker\\\\Docker\\\\Docker Desktop.exe\")",
+      "Bash(timeout /t 30 /nobreak)",
+      "Bash(docker info:*)",
+      "Bash(ping:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nUpdate event date to March 1, 2026 and location to Carlisle Expo Center\n\n- Updated countdown timer to March 1, 2026\n- Removed seconds from countdown \\(now shows days, hours, minutes\\)\n- Added date and location display under the countdown timer\n- Updated all screens \\(Home, Event, Tickets\\) with new date and location\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")"
     ]
   }
 }
